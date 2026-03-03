@@ -1,73 +1,121 @@
-# Welcome to your Lovable project
+# Students Doubt Solving website app
+# Academia Ace
 
-## Project info
+A modern React + TypeScript + Vite application powered by Supabase.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+# Installation & Setup Guide
 
-There are several ways of editing your application.
+Follow these steps to run the project locally from scratch.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 1️⃣ Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+Make sure you have:
 
-**Use your preferred IDE**
+* **Node.js (LTS version recommended – v18 or above)**
+* **npm** (comes with Node)
+* A **Supabase account**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+To check Node installation:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+node -v
+npm -v
+```
 
-Follow these steps:
+If Node is not installed, download it from:
+[https://nodejs.org](https://nodejs.org)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 2️⃣ Clone the Repository
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+git clone <your-repository-url>
+cd academia-ace
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 3️⃣ Install Dependencies
+
+Delete old dependencies if needed:
+
+```bash
+rm -rf node_modules package-lock.json
+```
+
+Install fresh dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## 4️⃣ Setup Environment Variables
+
+Create a `.env` file in the root directory (if not already present).
+
+Add the following:
+
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+---
+
+## 5️⃣ Create Supabase Project
+
+1. Go to [https://supabase.com](https://supabase.com)
+2. Create a new project
+3. Go to **Settings → API**
+4. Copy:
+
+   * Project URL
+   * anon public key
+5. Paste them inside the `.env` file
+
+---
+
+## 6️⃣ Run Development Server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will start at:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+http://localhost:5173
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 7️⃣ Build for Production (Optional)
 
-## What technologies are used for this project?
+```bash
+npm run build
+```
 
-This project is built with:
+To preview production build:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm run preview
+```
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+# Project Stack
 
-## Can I connect a custom domain to my Lovable project?
+* React + TypeScript
+* Vite
+* Tailwind CSS
+* Supabase (Authentication & Database)
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
